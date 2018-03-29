@@ -11,16 +11,24 @@ const wss = new WebSocketServer ({
 });
 
 wss.on("connection" , function(ws){
-    console.log("服务器成功建立连接...");
-    // 接收客户端消息
-    ws.on("message" , function(message){
-        console.log("客户端消息: " , message);
-        if(message){
-            var date = new Date().toLocaleString();
-            // 服务器推送
-            ws.send("你好客户端，系统当前时间是：" +date);
-        }
-    });
+    if(ws.readyState === 1){
+        console.log("服务器成功建立连接...");
+        // 接收客户端消息
+        ws.on("message" , function(message){
+            console.log("客户端消息: " , message);
+            if(message){
+                var date = new Date().toLocaleString();
+                // 服务器推送
+                ws.send("你好客户端，系统当前时间是：" +date);
+            }
+        });
+    }
+    else if(ws.readyState === 2){
+        ws.send("连接关闭中...");
+    }
+    else if(ws.readyState === 3){
+        ws.send("连接已经关闭了...");
+    }
 });
 
 
