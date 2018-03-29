@@ -7,32 +7,10 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-<div class="txt">
-    <input id="text" type="text" placeholder="请输入内容">
-    <input id="btn" type="button" onclick="sendMessage()" value="发送">
+<div class="login">
+    <input id="username" type="text" placeholder="请输入你的用户名">
+    <input id="btn" type="button" onclick="comfirm()" value="确认">
 </div>
-
-<script>
-    var ws = new WebSocket("ws://localhost:8081");
-
-    // 开始建立连接
-    ws.onopen = function(){
-      console.log("开始与服务器建立连接");
-    };
-
-    // 接收服务器推送
-    ws.onmessage = function(msg){
-        console.log(msg.data);
-    };
-
-    // 客户端推送
-    function sendMessage(){
-        ws.send($("#text").val()); // 向服务器发送信息
-    }
-
-
-</script>
-
-
 </body>
+<script type="text/javascript" src="../script/client.js"></script>
 </html>
