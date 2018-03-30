@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 20px;
+    font-family: "Helvetic Neue", Helvetica, Arial;
+}
+
+.wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    z-index: 100;
+    background: #cccccc;
+    font-size: 20px;
+}
+
+.login{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50%;
+    height: 30px;
+    padding: 3px;
+    display: flex;
+    display: -webkit-flex;
+}
+
+.login #nickname{
+    border: none;
+    height: 30px;
+    text-indent: 10px;
+    font-size: 0.8rem;
+    flex: 7;
+    margin: 0;
+    font-weight: 600;
+}
+
+.login .comfirm{
+    margin: 0 auto;
+    border: none;
+    font-size: 0.8rem;
+    background: lightcoral;
+    transition: background 1s;
+    height: 30px;
+    flex: 1;
+    color: white;
+}
+
+.login .comfirm:hover{
+    background: lightpink;
+}
+
+.chatBox{
+    z-index: 99;
+}
+
+.form{
+    background: #000;
+    padding: 2px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatPanel{
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+    background: #dddddd;
+}
+
+.form input{
+    height: 40px;
+    border: none;
+    text-indent: 10px;
+    font-size: 1rem;
+    margin: 3px 2px 3px 3px;
+    flex: 9;
+}
+
+.form button{
+    height: 40px;
+    border: none;
+    background: lightskyblue;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    line-height: 30px;
+    margin: 3px 7px 3px 3px;
+    transition: background 1s;
+    flex: 1;
+}
+
+.form button:hover{
+    background: lightcoral;
+}
+
+#message{
+    margin: 10px 5px 5px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.connectStatus{
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    transition: opcity 2s;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+    height: 30px;
+    line-height: 30px;
+}
+
+.user-connects{
+    background: lightblue;
+    color: white;
+}
+
+.user-disconnects{
+    background: lightcoral;
+    color: white;
+}

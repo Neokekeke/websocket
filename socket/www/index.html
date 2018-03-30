@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>客户端</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+    <div class="login">
+        <input id="nickname" type="text" placeholder="先来个元气满满的昵称吧 ^_^" autocomplete="off">
+        <button class="comfirm">确认</button>
+    </div>
+</div>
+
+<div class="chatBox">
+    <div class="chatPanel">
+        <ul id="message"></ul>
+    </div>
+    <div class="form">
+        <input id="text" type="text" placeholder="说点什么吧 ~" autocomplete="off">
+        <button id="send">发送</button>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="socket.js"></script>
+</html>
