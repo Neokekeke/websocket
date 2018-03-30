@@ -6,9 +6,9 @@ websocket实时聊天推送
 
 https://socket.io/get-started/chat/
 
-项目使用了node的express，socket.io模块
+### 项目使用了node的express，socket.io模块
 
-### 项目配置文件初始化：
+项目配置文件初始化：
 
 npm init 
 
