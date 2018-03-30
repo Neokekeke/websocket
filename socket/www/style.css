@@ -3,8 +3,9 @@
     margin: 0;
 }
 
-body{
-    font-size: 20px;
+/* rem 根元素样式 */
+html{
+    font-size: 15px;
     font-family: "Helvetic Neue", Helvetica, Arial;
 }
 
@@ -15,7 +16,6 @@ body{
     border: 1px solid;
     z-index: 100;
     background: #cccccc;
-    font-size: 20px;
 }
 
 .login{
@@ -132,7 +132,7 @@ body{
 
 .user-connects{
     background: lightblue;
-    color: white;
+    color: #000000;
 }
 
 .user-disconnects{
