@@ -18,17 +18,24 @@ http.listen(8082 , function(){
 });
 
 io.on('connection' , function(socket){
-    console.log("a user connects");
+    var nickname;
 
-    io.emit("user-connects" , {data : "a user connects"});
-
-    socket.on("disconnect" , function(){    //断开服务连接
-        console.log("a user disconnected");
-        io.emit("user-disconnect" , {data : "a user disconnected"});
+    // 连接状态
+    socket.on("connects" , function(msg){
+       nickname = msg;
+       io.emit("user-connects" ,  nickname);
+       //console.log(nickname + " connects");
     });
 
+    // 断开状态
+    socket.on("disconnect" , function(){    //断开服务连接
+        io.emit("user-disconnect" , nickname);
+        console.log(nickname + " disconnected");
+    });
+
+    // 聊天广播
     socket.on("chat message" , function(msg){
-        io.emit("chat message" , msg);
+        io.emit("chat message" , nickname + "：" + msg);
         console.log(msg);
     });
 
