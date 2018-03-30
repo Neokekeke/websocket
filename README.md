@@ -20,15 +20,15 @@ http://localhost:8082/
 
 ### 项目使用了node的express，socket.io模块，参考配置如下
 
-#### 项目配置文件初始化：
+#### 1、项目配置文件初始化：
 
 npm init 
 
-#### express 安装： 
+#### 2、express 安装： 
 
 npm install express --save
 
-#### socket.io 安装：
+#### 3、socket.io 安装：
 
 npm install socket.io --save
 
