@@ -17,28 +17,30 @@ http.listen(8082 , function(){
     console.log("listening on http://%s:%s" , host , port);
 });
 
+var userGroup = []; // 用户列表记录
 io.on('connection' , function(socket){
     var nickname;
-    var userGroup = [];
 
     // 连接状态
     socket.on("connects" , function(msg){
-       nickname = msg;
-       io.emit("user-connects" ,  nickname);
+        nickname = msg;
+        io.emit("user-connects" ,  nickname);
         userGroup.push(nickname);
-       //console.log(nickname + " connects");
+        io.emit("userGroup" , userGroup);
     });
 
     // 断开状态
     socket.on("disconnect" , function(){    //断开服务连接
         io.emit("user-disconnect" , nickname);
-        //console.log(nickname + " disconnected");
+        userGroup.pop();
     });
 
     // 聊天广播
     socket.on("chat message" , function(msg){
-        io.emit("chat message" , nickname + "：" + msg);
-        //console.log(msg);
+        io.emit("chat message" , {
+            user : nickname,
+            data : nickname + "：" + msg
+        });
     });
 
 
