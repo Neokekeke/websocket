@@ -2,13 +2,17 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>客户端</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="jquery-3.3.1.js"></script>
+    <script src="jquery.mobile-1.4.5.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="socket.js"></script>
 </head>
 <body>
 
+<div id="box">
 <!--昵称输入窗口-->
 <div class="wrap">
     <div class="login">
@@ -30,7 +34,8 @@
         <button id="send">发送</button>
     </div>
 </div>
+</div>
+
 
 </body>
-<script type="text/javascript" src="socket.js"></script>
 </html>

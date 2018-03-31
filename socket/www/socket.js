@@ -6,7 +6,7 @@ $(function(){
     let currentUser; // 当前的用户
 
     // 登录成功后发送昵称
-    $(".comfirm").on("click" , function(){
+    $(".comfirm").on("click",function(){
         if($("#nickname").val() === ""){
             alert("昵称不能为空哦~");
         }else{
@@ -43,7 +43,7 @@ $(function(){
     });
 
     // 客户端发送聊天信息
-    $("#send").on("click" , function(){
+    $("#send").on("click",function(){
         sendMsg();
     });
     $("#text").keydown(function(e){
