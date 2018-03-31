@@ -19,11 +19,12 @@
 
 <!--聊天界面窗口-->
 <div class="chatBox">
-    <div class="chatPanel">
+    <div class="chatPanel" style="overflow-y: scroll;overflow-x: hidden">
         <!--当前在线人数-->
         <div class="onlinePersons"></div>
         <ul id="message"></ul>
     </div>
+    <!--聊天输入框-->
     <div class="form">
         <input id="text" type="text" placeholder="说点什么吧 ~" autofocus>
         <button id="send">发送</button>
