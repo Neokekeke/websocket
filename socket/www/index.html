@@ -9,19 +9,23 @@
 </head>
 <body>
 
+<!--昵称输入窗口-->
 <div class="wrap">
     <div class="login">
-        <input id="nickname" type="text" placeholder="先来个元气满满的昵称吧 ^_^" autocomplete="off">
+        <input id="nickname" type="text" placeholder="先来个元气满满的昵称吧 ^_^" autofocus>
         <button class="comfirm">确认</button>
     </div>
 </div>
 
+<!--聊天界面窗口-->
 <div class="chatBox">
     <div class="chatPanel">
+        <!--当前在线人数-->
+        <div class="onlinePersons"></div>
         <ul id="message"></ul>
     </div>
     <div class="form">
-        <input id="text" type="text" placeholder="说点什么吧 ~" autocomplete="off">
+        <input id="text" type="text" placeholder="说点什么吧 ~" autofocus>
         <button id="send">发送</button>
     </div>
 </div>
