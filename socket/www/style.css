@@ -9,6 +9,7 @@ html{
     font-family: "Helvetic Neue", Helvetica, Arial;
 }
 
+/*登入遮罩层*/
 .wrap{
     position: absolute;
     width: 100%;
@@ -26,7 +27,7 @@ html{
     bottom: 0;
     margin: auto;
     width: 50%;
-    height: 30px;
+    height: 50px;
     padding: 3px;
     display: flex;
     display: -webkit-flex;
@@ -34,9 +35,9 @@ html{
 
 .login #nickname{
     border: none;
-    height: 30px;
+    height: 100%;
     text-indent: 10px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     flex: 7;
     margin: 0;
     font-weight: 600;
@@ -45,12 +46,13 @@ html{
 .login .comfirm{
     margin: 0 auto;
     border: none;
-    font-size: 0.8rem;
+    font-size: 1rem;
     background: lightcoral;
     transition: background 1s;
-    height: 30px;
+    height: 100%;
     flex: 1;
     color: white;
+    font-weight: 600;
 }
 
 .login .comfirm:hover{
@@ -74,6 +76,7 @@ html{
     justify-content: center;
 }
 
+/*聊天panel*/
 .chatPanel{
     width: 100%;
     position: absolute;
@@ -85,6 +88,7 @@ html{
     background: #dddddd;
 }
 
+/*聊天输入框*/
 .form input{
     height: 40px;
     border: none;
@@ -94,6 +98,7 @@ html{
     flex: 9;
 }
 
+/*按钮*/
 .form button{
     height: 40px;
     border: none;
@@ -112,12 +117,22 @@ html{
     background: lightcoral;
 }
 
+/*当前在线人数*/
+.onlinePersons{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+}
+
+/*用户聊天信息*/
 #message{
     margin: 10px 5px 5px 10px;
     font-size: 1rem;
     font-weight: 600;
 }
 
+/*连接状态公共样式*/
 .connectStatus{
     text-align: center;
     font-size: 1rem;
@@ -128,14 +143,23 @@ html{
     bottom: 0;
     height: 30px;
     line-height: 30px;
+    font-weight: 600;
 }
 
+/*用户连接态*/
 .user-connects{
-    background: lightblue;
-    color: #000000;
+    background: #82A6F5;
+    color: white;
 }
 
+/*用户断开态*/
 .user-disconnects{
-    background: lightcoral;
+    background: #F17C67;
+    color: white;
+}
+
+/*警告提示信息*/
+.warnMsg{
+    background-color: #FF534D;
     color: white;
 }
