@@ -19,24 +19,26 @@ http.listen(8082 , function(){
 
 io.on('connection' , function(socket){
     var nickname;
+    var userGroup = [];
 
     // 连接状态
     socket.on("connects" , function(msg){
        nickname = msg;
        io.emit("user-connects" ,  nickname);
+        userGroup.push(nickname);
        //console.log(nickname + " connects");
     });
 
     // 断开状态
     socket.on("disconnect" , function(){    //断开服务连接
         io.emit("user-disconnect" , nickname);
-        console.log(nickname + " disconnected");
+        //console.log(nickname + " disconnected");
     });
 
     // 聊天广播
     socket.on("chat message" , function(msg){
         io.emit("chat message" , nickname + "：" + msg);
-        console.log(msg);
+        //console.log(msg);
     });
 
 
